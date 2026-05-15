@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Skills | Erica M. Ponlaon - Freelance Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300..800;1,300..800&family=Inter:opsz,wght@14..32,400;14..32,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/modern-layer.css">
+</head>
+<body class="theme-modern">
+
+<header class="site-header">
+  <div class="container nav-bar">
+    <a href="../../index.html" class="logo">EMP</a>
+    <nav class="nav-links" id="navLinks" aria-label="Main navigation">
+      <a href="../../index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="services.html">Services</a>
+      <a href="skills.html" class="nav-active" aria-current="page">Skills</a>
+      <a href="projects.html">Projects</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <button type="button" class="nav-toggle" id="navToggle" aria-label="Open menu">
+      <i class="fas fa-bars"></i>
+    </button>
+  </div>
+</header>
+
+<div class="container">
+  <section id="skills" class="reveal motion-section">
+    <div class="section-header">
+      <h2 class="section-title">Skills</h2>
+      <p class="section-subtitle">Core strengths for web structure, styling, light interactivity, and disciplined delivery.</p>
+    </div>
+
+    <div class="skills-detail-grid">
+      <article class="skill-detail-card">
+        <h3><i class="fab fa-html5" style="color: var(--m-accent); margin-right: 0.35rem;"></i>HTML5</h3>
+        <p>Semantic web structure—landmarks, headings, forms, and meaningful markup for accessibility and SEO basics.</p>
+      </article>
+      <article class="skill-detail-card">
+        <h3><i class="fab fa-css3-alt" style="color: var(--m-accent); margin-right: 0.35rem;"></i>CSS3</h3>
+        <p>Responsive design, Flexbox and Grid layouts, typography, and consistent spacing systems.</p>
+      </article>
+      <article class="skill-detail-card">
+        <h3><i class="fab fa-js" style="color: var(--m-accent); margin-right: 0.35rem;"></i>JavaScript</h3>
+        <p>Basic interactivity—DOM updates, small UI behaviors, form validation patterns, and progressive enhancement.</p>
+      </article>
+      <article class="skill-detail-card">
+        <h3><i class="fas fa-mobile-screen" style="color: var(--m-accent); margin-right: 0.35rem;"></i>Mobile-friendly design</h3>
+        <p>Touch targets, breakpoints, readable type scales, and testing across common viewport sizes.</p>
+      </article>
+      <article class="skill-detail-card">
+        <h3><i class="fas fa-border-all" style="color: var(--m-accent); margin-right: 0.35rem;"></i>UI layout structuring</h3>
+        <p>Component-style thinking, alignment, hierarchy, and reusable patterns without relying on heavy frameworks.</p>
+      </article>
+      <article class="skill-detail-card">
+        <h3><i class="fas fa-bug" style="color: var(--m-accent); margin-right: 0.35rem;"></i>Debugging &amp; problem solving</h3>
+        <p>Browser dev tools, narrowing layout issues, and documenting reproduction steps for faster fixes.</p>
+      </article>
+      <article class="skill-detail-card">
+        <h3><i class="fas fa-bolt" style="color: var(--m-accent); margin-right: 0.35rem;"></i>Fast learner &amp; detail-oriented</h3>
+        <p>Quick adoption of client tools, checklists for QA, and careful review before handoff.</p>
+      </article>
+      <article class="skill-detail-card">
+        <h3><i class="fas fa-headset" style="color: var(--m-accent); margin-right: 0.35rem;"></i>Client communication</h3>
+        <p>Clear status updates, scope alignment, and responsive follow-up to keep projects moving.</p>
+      </article>
+    </div>
+
+    <p class="content-narrow" style="margin: 2.5rem auto 0; text-align: center; font-size: 0.9rem;">
+      <a href="projects.html" class="btn-sm">See projects</a>
+    </p>
+  </section>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <p class="footer-copy">© 2026 Erica M. Ponlaon. All Rights Reserved.</p>
+    </div>
+  </footer>
+</div>
+
+<button type="button" id="backToTop" class="back-to-top" aria-label="Back to top"><i class="fas fa-arrow-up"></i></button>
+
+<script>
+  const toggle = document.getElementById('navToggle');
+  const navLinks = document.getElementById('navLinks');
+  if (toggle) toggle.addEventListener('click', () => navLinks.classList.toggle('show'));
+  document.querySelectorAll('.nav-links a').forEach(a => {
+    a.addEventListener('click', () => { if (navLinks.classList.contains('show')) navLinks.classList.remove('show'); });
+  });
+  const backBtn = document.getElementById('backToTop');
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 300) backBtn.classList.add('show');
+    else backBtn.classList.remove('show');
+  });
+  backBtn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+  document.querySelectorAll('.reveal').forEach(el => el.classList.add('revealed'));
+</script>
+</body>
+</html>

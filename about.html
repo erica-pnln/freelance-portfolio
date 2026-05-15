@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>About Me | Erica M. Ponlaon - Freelance Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300..800;1,300..800&family=Inter:opsz,wght@14..32,400;14..32,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/modern-layer.css">
+</head>
+<body class="theme-modern">
+
+<header class="site-header">
+  <div class="container nav-bar">
+    <a href="../../index.html" class="logo">EMP</a>
+    <nav class="nav-links" id="navLinks" aria-label="Main navigation">
+      <a href="../../index.html">Home</a>
+      <a href="about.html" class="nav-active" aria-current="page">About</a>
+      <a href="services.html">Services</a>
+      <a href="skills.html">Skills</a>
+      <a href="projects.html">Projects</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <button type="button" class="nav-toggle" id="navToggle" aria-label="Open menu">
+      <i class="fas fa-bars"></i>
+    </button>
+  </div>
+</header>
+
+<div class="container">
+
+  <section id="about" class="reveal motion-section">
+    <div class="section-header">
+      <h2 class="section-title">About me</h2>
+      <p class="section-subtitle">I am Erica M. Ponlaon—a freelance web developer, virtual assistant, and creative collaborator based in the Philippines, working with clients worldwide.</p>
+    </div>
+
+    <div class="about-grid">
+      <div class="about-text">
+        <h3 class="subsection-title">Background</h3>
+        <p>My work combines <strong>technical execution</strong> with <strong>clear communication</strong>. I started by learning how websites are structured, then expanded into supporting real operations: inboxes, calendars, light research, and visual assets that match a brand’s tone.</p>
+        <p>Today I focus on helping <strong>small businesses, educators, and independent professionals</strong> who need dependable delivery without hiring a full in-house team. Whether the priority is a new landing page, a cleaner workflow, or consistent social graphics, I aim to make the next step obvious.</p>
+
+        <h3 class="subsection-title">How I work with clients</h3>
+        <ul class="checklist">
+          <li>Start with a short discovery pass: goals, audience, timeline, and existing assets.</li>
+          <li>Agree on milestones and a single channel for day-to-day questions (usually email).</li>
+          <li>Share work in small increments so you can review early—before design or copy is locked in.</li>
+          <li>Close each project with a concise handoff: what was delivered, where files live, and suggested next steps.</li>
+        </ul>
+
+        <h3 class="subsection-title">Tools &amp; environment</h3>
+        <p>Browser-based design review, Git-based code when applicable, cloud folders for assets, and task boards when projects grow past a few deliverables. I am comfortable adapting to your stack where it is reasonable.</p>
+
+        <div class="about-facts">
+          <div class="fact"><i class="fas fa-calendar-check"></i> 3+ years freelance experience</div>
+          <div class="fact"><i class="fas fa-smile"></i> 50+ client collaborations</div>
+          <div class="fact"><i class="fas fa-clock"></i> Typical reply within 24 hours</div>
+          <div class="fact"><i class="fas fa-language"></i> English &amp; Filipino</div>
+        </div>
+        <a href="contact.html" class="btn" style="margin-top: 1.5rem; display: inline-block;"><i class="fas fa-paper-plane"></i> Start a conversation</a>
+      </div>
+      <div class="about-quote">
+        <i class="fas fa-quote-left"></i>
+        <p>Clear scope, steady updates, and work you can actually use after handoff—that is the standard I hold myself to.</p>
+        <span>— Erica M. Ponlaon</span>
+      </div>
+    </div>
+
+    <div class="page-block card">
+      <h3 class="subsection-title" style="margin-top: 0; border: none;">At a glance</h3>
+      <div class="two-col">
+        <div>
+          <p style="margin-bottom: 0.5rem;"><strong style="color: #ebe3f7;">Services</strong></p>
+          <p class="meta-line">Web builds, landing pages, light front-end features, virtual assistance, branded graphics, and content support.</p>
+        </div>
+        <div>
+          <p style="margin-bottom: 0.5rem;"><strong style="color: #ebe3f7;">Availability</strong></p>
+          <p class="meta-line">Remote, flexible hours for global time zones. Project-based or limited monthly retainers.</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <p class="footer-copy">© 2026 Erica M. Ponlaon. All Rights Reserved.</p>
+    </div>
+  </footer>
+</div>
+
+<button id="backToTop" class="back-to-top"><i class="fas fa-arrow-up"></i></button>
+
+<script>
+  const toggle = document.getElementById('navToggle');
+  const navLinks = document.getElementById('navLinks');
+  if (toggle) {
+    toggle.addEventListener('click', () => {
+      navLinks.classList.toggle('show');
+    });
+  }
+  document.querySelectorAll('.nav-links a').forEach(anchor => {
+    anchor.addEventListener('click', function() {
+      if (navLinks.classList.contains('show')) navLinks.classList.remove('show');
+    });
+  });
+  const backBtn = document.getElementById('backToTop');
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 300) backBtn.classList.add('show');
+    else backBtn.classList.remove('show');
+  });
+  backBtn.addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+  document.querySelectorAll('.reveal').forEach(el => el.classList.add('revealed'));
+</script>
+</body>
+</html>

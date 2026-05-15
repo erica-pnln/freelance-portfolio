@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Testimonials | Erica M. Ponlaon - Freelance Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300..800;1,300..800&family=Inter:opsz,wght@14..32,400;14..32,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/modern-layer.css">
+</head>
+<body class="theme-modern">
+
+<header class="site-header">
+  <div class="container nav-bar">
+    <a href="../../index.html" class="logo">EMP</a>
+    <nav class="nav-links" id="navLinks" aria-label="Main navigation">
+      <a href="../../index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="services.html">Services</a>
+      <a href="skills.html">Skills</a>
+      <a href="projects.html">Projects</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <button type="button" class="nav-toggle" id="navToggle" aria-label="Open menu">
+      <i class="fas fa-bars"></i>
+    </button>
+  </div>
+</header>
+
+<div class="container">
+
+  <section id="testimonials" class="reveal">
+    <div class="section-header">
+      <h2 class="section-title">Client testimonials</h2>
+      <p class="section-subtitle">Feedback from founders, operators, and marketing leads who needed dependable execution—often blending web updates with ongoing administrative support.</p>
+    </div>
+
+    <div class="testimonials-grid">
+      <div class="testimonial-card">
+        <div style="margin-bottom: 0.75rem;">
+          <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+        </div>
+        <p class="meta-line" style="margin-bottom: 0.75rem;">Website redesign · small business</p>
+        <blockquote style="margin: 0; padding: 0; border: none;">
+          <p style="font-style: italic; line-height: 1.65;">“Erica redesigned our entire website and it is now faster and easier to navigate. She was responsive, documented decisions clearly, and respected our brand constraints.”</p>
+        </blockquote>
+        <h4 style="margin-top: 1rem; margin-bottom: 0;">Maria Santos<br><span style="font-weight: 400; color: #a894c4;">Owner, local retail business</span></h4>
+      </div>
+      <div class="testimonial-card">
+        <div style="margin-bottom: 0.75rem;">
+          <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+        </div>
+        <p class="meta-line" style="margin-bottom: 0.75rem;">Virtual assistance · startup</p>
+        <blockquote style="margin: 0; padding: 0; border: none;">
+          <p style="font-style: italic; line-height: 1.65;">“Her VA support saved me several hours every week—inbox triage, scheduling, and follow-ups were handled proactively. Communication was always structured and easy to scan.”</p>
+        </blockquote>
+        <h4 style="margin-top: 1rem; margin-bottom: 0;">James Carter<br><span style="font-weight: 400; color: #a894c4;">Founder, early-stage SaaS</span></h4>
+      </div>
+      <div class="testimonial-card">
+        <div style="margin-bottom: 0.75rem;">
+          <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+        </div>
+        <p class="meta-line" style="margin-bottom: 0.75rem;">Social creative · marketing</p>
+        <blockquote style="margin: 0; padding: 0; border: none;">
+          <p style="font-style: italic; line-height: 1.65;">“The campaign graphics Erica produced were consistent with our guidelines and ready to publish. Turnaround was predictable, which helped our content calendar stay on track.”</p>
+        </blockquote>
+        <h4 style="margin-top: 1rem; margin-bottom: 0;">Lena Kim<br><span style="font-weight: 400; color: #a894c4;">Marketing manager, B2B services</span></h4>
+      </div>
+    </div>
+
+    <div class="page-block card" style="max-width: 52rem; margin-left: auto; margin-right: auto;">
+      <h3 class="subsection-title" style="margin-top: 0; border: none;">What clients emphasize</h3>
+      <div class="two-col">
+        <div>
+          <p><strong style="color: #ebe3f7;">Clarity</strong></p>
+          <p class="meta-line">Written updates, scoped revisions, and decisions captured so nothing relies on memory alone.</p>
+        </div>
+        <div>
+          <p><strong style="color: #ebe3f7;">Ownership</strong></p>
+          <p class="meta-line">Proactive suggestions when a brief is ambiguous—without expanding scope silently.</p>
+        </div>
+      </div>
+      <p style="margin-top: 1.5rem; margin-bottom: 0;">References or additional samples can be provided for serious inquiries, subject to confidentiality agreements.</p>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <p class="footer-copy">© 2026 Erica M. Ponlaon. All Rights Reserved.</p>
+    </div>
+  </footer>
+</div>
+
+<button id="backToTop" class="back-to-top"><i class="fas fa-arrow-up"></i></button>
+
+<script>
+  const toggle = document.getElementById('navToggle');
+  const navLinks = document.getElementById('navLinks');
+  if (toggle) {
+    toggle.addEventListener('click', () => {
+      navLinks.classList.toggle('show');
+    });
+  }
+  document.querySelectorAll('.nav-links a').forEach(anchor => {
+    anchor.addEventListener('click', function() {
+      if (navLinks.classList.contains('show')) navLinks.classList.remove('show');
+    });
+  });
+  const backBtn = document.getElementById('backToTop');
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 300) backBtn.classList.add('show');
+    else backBtn.classList.remove('show');
+  });
+  backBtn.addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+  document.querySelectorAll('.reveal').forEach(el => el.classList.add('revealed'));
+</script>
+</body>
+</html>

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Contact | Erica M. Ponlaon - Freelance Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300..800;1,300..800&family=Inter:opsz,wght@14..32,400;14..32,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/modern-layer.css">
+</head>
+<body class="theme-modern">
+
+<header class="site-header">
+  <div class="container nav-bar">
+    <a href="../../index.html" class="logo">EMP</a>
+    <nav class="nav-links" id="navLinks" aria-label="Main navigation">
+      <a href="../../index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="services.html">Services</a>
+      <a href="skills.html">Skills</a>
+      <a href="projects.html">Projects</a>
+      <a href="contact.html" class="nav-active" aria-current="page">Contact</a>
+    </nav>
+    <button type="button" class="nav-toggle" id="navToggle" aria-label="Open menu">
+      <i class="fas fa-bars"></i>
+    </button>
+  </div>
+</header>
+
+<div class="container">
+
+  <section id="contact" class="reveal motion-section">
+    <div class="section-header">
+      <h2 class="section-title">Contact</h2>
+      <p class="section-subtitle">Tell me about your timeline, budget range (optional), and the outcome you need. I respond within one business day with next steps or clarifying questions.</p>
+    </div>
+
+    <div class="contact-row">
+      <div class="contact-info">
+        <h3 style="margin-bottom: 1rem; font-size: 1.25rem;">Direct channels</h3>
+        <p style="margin-bottom: 1rem; line-height: 1.65;"><i class="fas fa-map-marker-alt" style="color: #b89ae0;"></i> <strong>Location:</strong> Philippines · <strong>Working style:</strong> fully remote, flexible time zones for sync or async collaboration.</p>
+        <p style="margin-bottom: 0.65rem;"><i class="fas fa-phone" style="color: #b89ae0;"></i> <strong>Phone:</strong> +63 975 636 5254</p>
+        <p style="margin-bottom: 1.25rem;"><i class="fas fa-envelope" style="color: #b89ae0;"></i> <strong>Email:</strong> ericamponlaon@gmail.com</p>
+        <h4 style="font-size: 1rem; color: #ebe3f7; margin-bottom: 0.5rem;">Profiles</h4>
+        <div class="social-icons" style="margin-top: 0.5rem;">
+          <a href="https://linkedin.com/in/erica-ponlaon" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+          <a href="https://github.com/EricaPonlaon" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fab fa-github"></i></a>
+          <a href="https://instagram.com/erica_ponlao098n_" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        </div>
+        <div style="margin-top: 1.75rem; padding-top: 1.25rem; border-top: 1px solid rgba(120, 88, 160, 0.35);">
+          <p class="meta-line" style="margin: 0;"><strong>Response SLA:</strong> within 24 hours on business days.</p>
+          <p class="meta-line" style="margin-top: 0.5rem;">For formal proposals, include preferred start date and whether the work is fixed-scope or ongoing.</p>
+        </div>
+      </div>
+      <div class="contact-form">
+        <h3 style="margin-bottom: 1rem; font-size: 1.25rem;">Project form</h3>
+        <form id="contactForm">
+          <label for="c-name" class="form-label">Name</label>
+          <input id="c-name" name="name" type="text" placeholder="Your full name" required>
+          <label for="c-email" class="form-label">Email</label>
+          <input id="c-email" name="email" type="email" placeholder="you@company.com" required>
+          <label for="c-msg" class="form-label">Project details</label>
+          <textarea id="c-msg" name="message" rows="6" placeholder="Goals, timeline, links to references, and any constraints (brand, tech stack, budget band)." required></textarea>
+          <button type="submit" class="btn">Send message <i class="fas fa-paper-plane"></i></button>
+        </form>
+        <p class="meta-line" style="margin-top: 1rem; font-size: 0.82rem;">This form is a convenience preview; production sites often connect to email APIs or CRMs. Submitting here shows a confirmation alert only.</p>
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <p class="footer-copy">© 2026 Erica M. Ponlaon. All Rights Reserved.</p>
+    </div>
+  </footer>
+</div>
+
+<button id="backToTop" class="back-to-top"><i class="fas fa-arrow-up"></i></button>
+
+<script>
+  const toggle = document.getElementById('navToggle');
+  const navLinks = document.getElementById('navLinks');
+  if (toggle) {
+    toggle.addEventListener('click', () => {
+      navLinks.classList.toggle('show');
+    });
+  }
+  document.querySelectorAll('.nav-links a').forEach(anchor => {
+    anchor.addEventListener('click', function() {
+      if (navLinks.classList.contains('show')) navLinks.classList.remove('show');
+    });
+  });
+  const backBtn = document.getElementById('backToTop');
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 300) backBtn.classList.add('show');
+    else backBtn.classList.remove('show');
+  });
+  backBtn.addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+  const form = document.getElementById('contactForm');
+  if (form) {
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+      alert('Thank you for your message. In a live deployment this would route to email or a CRM. Expect a personal reply within 24 business hours.');
+      form.reset();
+    });
+  }
+  document.querySelectorAll('.reveal').forEach(el => el.classList.add('revealed'));
+</script>
+</body>
+</html>
